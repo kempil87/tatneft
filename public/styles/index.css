@@ -1,0 +1,16 @@
+@import "ui/checkbox.css";
+@import "ui/circle.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .page-cont {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 2rem .5rem;
+        width: 100%;
+    }
+}
