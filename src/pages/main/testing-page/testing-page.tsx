@@ -147,7 +147,7 @@ export const TestingPage = () => {
           headerClassName='text-white/75'
           title={`Вопрос ${currentIndex + 1}/${questions.length}`}
         >
-          <TestProgressBar />
+          <TestProgressBar questions={questions} />
 
           {questions.map((el) => (
             <TestCard onPick={onAnswerPick} {...el} key={el.id} />

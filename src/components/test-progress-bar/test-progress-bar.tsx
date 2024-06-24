@@ -9,9 +9,13 @@ import { correctMultipleAnswers } from '../../shared/utils/correct-multiple-answ
 
 interface TestProgressBarProps {
   className?: HTMLDivElement['className'];
+  questions: TestModel[];
 }
 
-export const TestProgressBar = ({ className }: TestProgressBarProps) => {
+export const TestProgressBar = ({
+  className,
+  questions,
+}: TestProgressBarProps) => {
   const { currentQuestions, updateCurrentQuestion, currentQuestionList } =
     useCurrentQuestions();
   const { id } = useParams();
@@ -50,10 +54,10 @@ export const TestProgressBar = ({ className }: TestProgressBarProps) => {
 
   return (
     <div className='flex gap-2'>
-      {TEST_DATA_LIST.map((el) => (
+      {questions.map((el) => (
         <button
           key={el.id}
-          className={cn('bg-light_grey/60 h-2 grow rounded-xl', className, {
+          className={cn('h-2 grow rounded-xl bg-light_grey/60', className, {
             '!bg-danger/75': getWrongAnswer(el.id),
             '!bg-primary/75': currentQuestions?.id === el.id,
             '!bg-success/75': getCorrectAnswer(el.id),

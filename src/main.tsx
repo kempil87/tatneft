@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './app.tsx';
-import ErrorBoundary from './components/error-boundary/error-boundary.tsx';
+import ErrorBoundary from './containers/error-boundary/error-boundary.tsx';
 
 import '../public/styles/index.css';
 

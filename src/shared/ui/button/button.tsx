@@ -5,8 +5,7 @@ import { BUTTONS_VARIANTS } from '../../constants/button-variants.ts';
 
 export type ButtonVariants = 'outline' | 'light' | 'danger' | 'primary';
 
-export interface ButtonProps
-  extends HTMLAttributes<HTMLButtonElement & HTMLAnchorElement> {
+export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   href?: string;
   variant?: ButtonVariants;

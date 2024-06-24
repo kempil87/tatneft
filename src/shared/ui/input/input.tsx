@@ -2,10 +2,8 @@ import { ChangeEvent, InputHTMLAttributes, ReactNode, useRef } from 'react';
 
 import {
   Controller,
-  FieldName,
   FieldPath,
   FieldValues,
-  Path,
   RegisterOptions,
   useFormContext,
 } from 'react-hook-form';
@@ -13,7 +11,6 @@ import {
 import { cn } from '../../utils/classnames.ts';
 import { FormError } from '../form-error/form-error.tsx';
 import { enabledNumberKeyEvent } from './common/enabled-keyboard-options.ts';
-import { IconButton } from '../icon-button/icon-button.tsx';
 import { Icon } from '../icon/icon.tsx';
 
 type InputBaseProps = Omit<
@@ -86,8 +83,8 @@ export const Input = <Name extends FieldValues>({
                 <label
                   ref={labelRef}
                   className={cn(
-                    'text-placeholder group-focus-within:bg-bg pointer-events-none inline-block pl-5 pr-3.5 text-sm transition-all duration-300 pos-abs-y group-focus-within:!top-0 group-focus-within:!pl-2 group-focus-within:text-xs',
-                    { 'bg-bg !top-0 !pl-2 !text-xs': field.value },
+                    'pointer-events-none inline-block pl-5 pr-3.5 text-sm text-placeholder transition-all duration-300 pos-abs-y group-focus-within:!top-0 group-focus-within:bg-bg group-focus-within:!pl-2 group-focus-within:text-xs',
+                    { '!top-0 bg-bg !pl-2 !text-xs': field.value },
                   )}
                 >
                   {label}
@@ -98,7 +95,7 @@ export const Input = <Name extends FieldValues>({
                 ref={inputRef}
                 {...props}
                 className={cn(
-                  'focus:placeholder:text-placeholder caret-placeholder placeholder:text-placeholder h-12 w-full appearance-none rounded-xl border bg-transparent px-3.5 py-1 text-sm transition-all duration-300 focus:outline-0',
+                  'h-12 w-full appearance-none rounded-xl border bg-transparent px-3.5 py-1 text-sm caret-placeholder transition-all duration-300 placeholder:text-placeholder focus:outline-0 focus:placeholder:text-placeholder',
                   { 'pr-8': allowClear },
                   { 'placeholder:text-transparent': label },
                   {

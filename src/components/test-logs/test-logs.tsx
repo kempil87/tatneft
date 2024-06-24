@@ -53,12 +53,13 @@ export const TestLogs = () => {
 
   if (!filteredTestList.length) {
     return (
-      <span className='text-placeholder mt-10 block pb-10 text-center'>
+      <span className='mt-10 block pb-10 text-center text-placeholder'>
         Других результатов тестов не найдены, пройдите их еще раз что б увидеть
         результаты их попыток
       </span>
     );
   }
+
   return (
     <Card title='Другие попытки'>
       <Collapse>

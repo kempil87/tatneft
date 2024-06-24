@@ -123,11 +123,11 @@ export const SPRITES_META: {
       dollar: {
         viewBox: '0 0 24 24',
       },
-      done: {
-        viewBox: '0 0 20 16',
-      },
       done_circle: {
         viewBox: '0 0 24 24',
+      },
+      done: {
+        viewBox: '0 0 20 16',
       },
       edit: {
         viewBox: '0 0 24 24',
@@ -135,10 +135,10 @@ export const SPRITES_META: {
       error: {
         viewBox: '0 0 24 24',
       },
-      eye: {
+      'eye-off': {
         viewBox: '0 0 24 24',
       },
-      'eye-off': {
+      eye: {
         viewBox: '0 0 24 24',
       },
       file: {
@@ -150,10 +150,10 @@ export const SPRITES_META: {
       form_clear: {
         viewBox: '0 0 24 24',
       },
-      handshake: {
+      'handshake-money': {
         viewBox: '0 0 24 24',
       },
-      'handshake-money': {
+      handshake: {
         viewBox: '0 0 24 24',
       },
       home: {
